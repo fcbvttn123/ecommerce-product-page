@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Kumbh Sans', sans-serif;
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%); /* with 75% opacity for lightbox background */
+
+    /* Weights: 400, 700 */
+
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+p, a, button {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+/* -------------- Header -------------- */
+
+.mainHeader{
+    width: 100vw;
+}
+
+.wrapper-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Grayish-blue);
+    z-index: 1;
+}
+
+.wrapper-header > img {             /* Logo */
+    cursor: pointer;
+}
+
+.links {                            /* Links */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.wrapper-header .links {
+    position: relative;
+    right: 17rem;
+}
+
+.links a {
+    cursor: pointer;
+    padding: 5rem 2rem;
+    display: block;
+}
+
+.links a:hover {
+    border-bottom: 1.5px solid var(--Orange);
+    font-weight: 800;
+}
+
+.avt-cart {                           /* Avt and Card */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon::after {
+    content: "3";
+    font-size: .8rem;
+    font-weight: 800;
+
+    position: absolute;
+    top: -0.5rem;
+    right: 0;
+    background-color: var(--Orange);
+    padding: 0 .4rem;
+    border-radius: .5rem;
+    color: white;
+    display: none;
+}
+
+.cart-icon:hover:after {
+    display: block;
+}
+
+.avt-cart .avt {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.avt-cart .avt:hover {
+    border: 1.5px solid var(--Orange);
+}
+
+.myCart {                       /* My cart Box */           
+    position: absolute;
+    right: 0;
+    top: 10rem;
+    min-height: 160%;
+    max-width: 28%;
+    min-width: 28%;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 5px 10px 5px 10px #8888885d;
+    z-index: 11115;
+    background-color: white;
+}
+
+.myCart hr {
+    height: .1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+    background-color: rgba(128, 128, 128, 0.984);
+}
+
+.myCart > p {
+    color: black;
+    font-weight: 900;
+    margin-bottom: 2.4rem;
+}
+
+.myCart-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.myCart-summary img {
+    width: 20%;
+    height: 20%;
+    border-radius: .5rem;
+}
+
+.myCart-summary .price-name .name, .myCart-summary .price-name .price{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: black;
+}
+
+.myCart-summary .price-name .price span {
+    font-weight: 700;
+    color: black;
+}
+
+.myCart-summary .fa-dumpster {
+    font-size: 2rem;
+    color: grey;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--Orange);
+    padding: 1rem;
+    border-radius: .75rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+
